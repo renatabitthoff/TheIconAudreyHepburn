@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="seccion-caridad">
+    <div class="texto-banner">
+        <h2>Caridad</h2>
+        <h3>Infancia marcada por la guerra</h3>
+        <p>Además de ser una de las actrices más admiradas del siglo XX, Audrey Hepburn desarrolló un profundo compromiso con el activismo y la filantropía, especialmente durante los últimos años de su vida. Su vocación humanitaria tuvo raíces en su infancia, marcada por el sufrimiento que vivió durante la Segunda Guerra Mundial en los Países Bajos ocupados por los nazis. Estas experiencias tempranas la sensibilizaron particularmente con el dolor ajeno, en especial el de los niños. En 1988 fue nombrada Embajadora de Buena Voluntad de UNICEF, y a partir de entonces dedicó su tiempo y energía a recorrer países afectados por la pobreza, el hambre y los conflictos armados. Hepburn visitó lugares como Etiopía, Sudán, Somalia, Vietnam y Bangladés, donde promovió campañas de vacunación, programas de nutrición infantil, acceso a agua potable y educación. Su enfoque humanitario se caracterizó por la empatía, la humildad y la discreción: nunca buscó protagonismo, sino que utilizó su fama para llamar la atención del mundo sobre las problemáticas que enfrentaban millones de niños. Su compromiso le valió reconocimientos internacionales, como el Premio Humanitario Jean Hersholt, otorgado póstumamente por la Academia de Hollywood en 1993, y la Medalla Presidencial de la Libertad, uno de los mayores honores civiles en Estados Unidos. Tras su fallecimiento, su legado humanitario fue continuado por la Audrey Hepburn Children’s Fund, una fundación creada por sus hijos con el objetivo de seguir ayudando a la infancia en situaciones vulnerables. Así, Audrey Hepburn dejó una huella imborrable no solo en el cine y la moda, sino también en la historia de la solidaridad y el compromiso social.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4uU5I2ydpiY?si=CaIUUBKdrnR1VvrK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  header {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* importante para el botón */
+  }
+  
+  .Audrey {
+    width: 40%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  /* Botón hamburguesa */
+  .hamburguesa {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none; /* Oculto en desktop */
+  }
+  
+  /* Menú */
+  .menu-nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .contenedora {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .caja {
+    height: 200px;
+    overflow: hidden;
+    width: 33.33%;
+    background-color: ghostwhite;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+  .caja img{ max-width: 100%;}
+  .caja2 {
+    height: 200px;
+    overflow: hidden;
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+  .caja2 img{ max-width: 100%;}
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid #000000; 
+    padding-bottom: 0.5rem;
+    color: #111;
+  }
+
+  .section {
+    padding: 2rem 10%;
+  }
+
+  .seccion-moda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .seccion-caridad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .seccion-Biografía {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .seccion-Cinematografía{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .seccion-premios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+  
+  /* Responsive: tablets */
+  @media (max-width: 768px) {
+    .hamburguesa {
+      display: block; /* Muestra el botón hamburguesa */
+    }
+  
+    .menu-nav {
+      display: none; /* Esconde el menú en móvil/tablet */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-nav.activo {
+      display: flex; /* Muestra el menú cuando se abre */
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
+    }
+  
+    .contenedora {
+      flex-direction: row;
+    }
+  
+    .caja, .caja2 {
+      width: 50%; /* 2 columnas */
+    }
+  }
+  
+  /* Responsive: celulares */
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .contenedora {
+      flex-direction: column;
+    }
+  
+    .caja, .caja2 {
+      width: 100%; /* 1 columna */
+    }
+  }
+  
+ 
+  

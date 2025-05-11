@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main> 
+    <img src="imagecompressor/banner-min.jpg" class="banner" alt="Banner de Audrey">
+
+    <div class="contenedora">
+      <div class="caja">
+        <img src="imagecompressor/audrey hepburn on the set of sabrina, 1954-min.jpg">
+      </div>
+      <div class="caja">
+        <img src="imagecompressor/bostezo-min.jpg"> 
+      </div>
+      <div class="caja">
+        <img src="imagecompressor/maquillaje-min.jpg">
+      </div>
+
+      <div class="caja2">
+        <img src="imagecompressor/auto-min.jpg">
+      </div>
+      <div class="caja2">
+        <img src="imagecompressor/espejo-min.jpg">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>

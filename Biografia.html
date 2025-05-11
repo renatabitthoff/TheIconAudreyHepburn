@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="seccion-Biografía">
+    <div class="texto-banner">
+        <h2>Biografía</h2>
+        <h3>Una vida marcada por la elegancia, la resiliencia y el compromiso</h3>
+        <p>Audrey Hepburn llevó una vida personal marcada por la elegancia discreta, los vínculos familiares y una constante búsqueda de equilibrio. Nació el 4 de mayo de 1929 en Bruselas, Bélgica, y pasó parte de su infancia en Inglaterra y los Países Bajos, donde vivió los duros años de la Segunda Guerra Mundial. Su nombre completo era Audrey Kathleen Ruston, y adoptó más adelante el apellido Hepburn de su padre. Estuvo casada en dos ocasiones: primero con el actor Mel Ferrer, con quien tuvo a su primer hijo, Sean, y luego con el psiquiatra italiano Andrea Dotti, con quien tuvo a su segundo hijo, Luca. Aunque ambas relaciones terminaron en divorcio, Hepburn mantuvo una vida familiar activa, especialmente en sus años más alejados de los reflectores. Se instaló en una casa de campo en Suiza, donde cultivó una vida tranquila, rodeada de naturaleza, arte y sus seres queridos. Fue una mujer reservada, alejada del exceso de la fama, y valoraba profundamente la intimidad y la estabilidad emocional. Además, era amante de los animales, en especial de los perros, y disfrutaba de actividades sencillas como la jardinería, la lectura y la cocina. Audrey Hepburn encontró en la vida cotidiana una fuente de paz y belleza, reflejando fuera de escena la misma gracia que la caracterizaba en público.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UBfMAY64Z9o?si=e8RLGem1fmo2PzN1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  </div>
+
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>

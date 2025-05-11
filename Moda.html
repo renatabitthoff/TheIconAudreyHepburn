@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="seccion-moda">
+    <div class="texto-banner">
+        <h2>Moda y Estilo</h2>
+        <h3>El icono que rechazó los códigos de Hollywood y triunfó</h3>
+        <p>Audrey Hepburn fue mucho más que una estrella de cine: se convirtió en un ícono de estilo universal que dejó una huella imborrable en la historia de la moda. Con una elegancia innata y una presencia delicada, supo imponer una nueva forma de entender el glamour, alejándose de los excesos y apostando por una estética más minimalista y refinada. Su alianza con el diseñador Hubert de Givenchy no solo dio vida a algunos de los atuendos más memorables del cine, como el legendario vestido negro de Breakfast at Tiffany’s, sino que también inauguró una relación pionera entre actriz y diseñador. A través de su estilo personal caracterizado por líneas limpias, siluetas sencillas y detalles atemporales, Hepburn revolucionó los cánones estéticos de su tiempo y sentó las bases del chic moderno. Su influencia sigue viva en la moda contemporánea, inspirando a diseñadores, artistas y amantes del buen vestir en todo el mundo.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m1nI5ROwkqc?si=r6KNmU-HD6lc15eV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>

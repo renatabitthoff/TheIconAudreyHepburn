@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="seccion-Cinematografía">
+    <div class="texto-banner">
+        <h2>Cinematografía</h2>
+        <h3>La diferente que conquisto la pantalla y el mundo</h3>
+        <p>La carrera de Audrey Hepburn como actriz fue tan brillante como influyente, convirtiéndola en un ícono del cine clásico de Hollywood. Su ascenso al estrellato comenzó en 1953 con Roman Holiday, donde interpretó a la princesa Ann, un papel que le valió un Premio Óscar a Mejor Actriz y la consagró como una nueva figura en la industria. A partir de allí, protagonizó una serie de películas que hoy son consideradas obras fundamentales del cine del siglo XX. Entre ellas destacan Sabrina (1954), dirigida por Billy Wilder, Funny Face (1957), donde compartió pantalla con Fred Astaire, The Nun's Story (1959), que le valió una nominación al Óscar por su interpretación dramática, y Breakfast at Tiffany's (1961), donde dio vida a la inolvidable Holly Golightly, consolidando su estatus como ícono de estilo y elegancia. Su versatilidad le permitió moverse con naturalidad entre la comedia romántica, el drama y el musical, siendo también reconocida por papeles en My Fair Lady (1964), Charade (1963) y Wait Until Dark (1967), por la que recibió su última nominación al Óscar. A pesar de retirarse en gran medida del cine a fines de los años 60 para dedicarse a su familia y más tarde a labores humanitarias, Hepburn dejó un legado cinematográfico sólido, caracterizado por su gracia, carisma y talento interpretativo. Su estilo refinado y su presencia en pantalla trascendieron lo actoral, convirtiéndola en una figura cultural y una fuente de inspiración permanente para generaciones posteriores.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/77YpsPwlEFQ?si=joazZDvoTpRNvBYW&amp;start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  </div>
+
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>

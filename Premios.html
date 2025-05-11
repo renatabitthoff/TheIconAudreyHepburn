@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="seccion-premios">
+    <div class="texto-banner">
+        <h2>Premios</h2>
+        <h3>Reconocimiento Mundial</h3>
+        <p>Audrey Hepburn fue ampliamente reconocida a lo largo de su vida tanto por su talento artístico como por su labor humanitaria. En el ámbito cinematográfico, recibió numerosos premios de prestigio. Ganó un Premio Óscar a Mejor Actriz en 1954 por Roman Holiday, su primer papel protagónico en Hollywood, y fue nominada en otras cuatro ocasiones por Sabrina, The Nun's Story, Breakfast at Tiffany’s y Wait Until Dark. Además, obtuvo tres Premios BAFTA como Mejor Actriz y un Premio Globo de Oro, consolidándose como una figura clave del cine clásico. En 1993, la Academia de Hollywood le otorgó el Premio Humanitario Jean Hersholt de manera póstuma, en reconocimiento a su compromiso con los derechos de la infancia a través de UNICEF. Ese mismo año, recibió la Medalla Presidencial de la Libertad, el mayor honor civil en los Estados Unidos, por su dedicación a las causas humanitarias. También fue galardonada con un Emmy póstumo por el documental Gardens of the World with Audrey Hepburn y con un Grammy en la categoría Mejor Álbum Hablado para Niños por su participación en un proyecto literario para jóvenes. Estos logros la convirtieron en una de las pocas artistas en la historia que han ganado un EGOT (Emmy, Grammy, Óscar y Tony). Su carrera teatral también fue distinguida con un Premio Tony a la Mejor Actriz de Reparto por la obra Ondine en 1954. A lo largo de su vida, Audrey Hepburn no solo fue símbolo de elegancia y talento, sino también de empatía y compromiso, lo que le valió reconocimientos que trascienden el ámbito artístico y refuerzan su legado como una de las mujeres más admiradas del siglo XX.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/p-vR7D21wqI?si=1KZTIeldu8WH_Qjn&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>
