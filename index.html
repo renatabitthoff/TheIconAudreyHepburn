@@ -5,6 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audrey Hepburn</title>
   <link rel="stylesheet" href="estilo.css">
+  <style>
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 40px 0 20px 0;
+      justify-content: center;
+    }
+    .galeria img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .galeria img:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      transform: scale(1.08);
+    }
+    .modal-imagen {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      animation: aparecer 0.2s;
+      flex-direction: column;
+    }
+    .modal-imagen img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 32px black;
+      margin: 0 40px;
+    }
+    .modal-imagen.active {
+      display: flex;
+    }
+    .modal-imagen .cerrar {
+      position: absolute;
+      top: 24px;
+      right: 40px;
+      font-size: 2.8rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      background: transparent;
+      border: none;
+      z-index: 1001;
+    }
+    .modal-imagen .navegacion {
+      display: flex;
+      justify-content: space-between;
+      width: 100vw;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+    .modal-imagen .navegacion button {
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: #fff;
+      font-size: 3rem;
+      cursor: pointer;
+      padding: 10px 24px;
+      border-radius: 50%;
+      margin: 0 16px;
+      pointer-events: auto;
+      transition: background 0.2s;
+    }
+    .modal-imagen .navegacion button:hover {
+      background: rgba(0,0,0,0.7);
+    }
+    @keyframes aparecer {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,7 +98,6 @@
       <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
     </a>
     <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
-    
     <nav class="menu-nav">
       <ul class="menu">
         <li><a href="Cinematografia.html">Cinematografía</a></li>
@@ -28,7 +113,27 @@
   <main> 
     <img src="imagecompressor/banner-min.jpg" class="banner" alt="Banner de Audrey">
 
-    <div class="contenedora">
+    <section>
+      <h2 style="text-align:center; margin-bottom: 10px;">Galería de Fotos</h2>
+      <div class="galeria" id="galeria">
+        <img src="imagecompressor/audrey hepburn on the set of sabrina, 1954-min.jpg" alt="Audrey Hepburn en Sabrina" data-grande="imagecompressor/audrey hepburn on the set of sabrina, 1954-min.jpg">
+        <img src="imagecompressor/bostezo-min.jpg" alt="Audrey Bostezo" data-grande="imagecompressor/bostezo-min.jpg"> 
+        <img src="imagecompressor/maquillaje-min.jpg" alt="Audrey Maquillaje" data-grande="imagecompressor/maquillaje-min.jpg">
+        <img src="imagecompressor/auto-min.jpg" alt="Audrey Auto" data-grande="imagecompressor/auto-min.jpg">
+        <img src="imagecompressor/espejo-min.jpg" alt="Audrey Espejo" data-grande="imagecompressor/espejo-min.jpg">
+      </div>
+    </section>
+
+    <div class="modal-imagen" id="modalImagen">
+      <button class="cerrar" aria-label="Cerrar imagen" id="cerrarModal">&times;</button>
+      <div class="navegacion">
+        <button id="anterior" aria-label="Anterior">&#8249;</button>
+        <button id="siguiente" aria-label="Siguiente">&#8250;</button>
+      </div>
+      <img src="" alt="Imagen Ampliada" id="imagenModal">
+    </div>
+
+    <div class="contenedora" style="display:none;">
       <div class="caja">
         <img src="imagecompressor/audrey hepburn on the set of sabrina, 1954-min.jpg">
       </div>
@@ -38,7 +143,6 @@
       <div class="caja">
         <img src="imagecompressor/maquillaje-min.jpg">
       </div>
-
       <div class="caja2">
         <img src="imagecompressor/auto-min.jpg">
       </div>
@@ -46,7 +150,6 @@
         <img src="imagecompressor/espejo-min.jpg">
       </div>
     </div>
-
   </main>
   <section class="seccion-anuncio-companero">
     <h2>¡Descubre!</h2>
@@ -56,17 +159,81 @@
             title="Anuncio de un sitio compañero del curso">
          <a href="https://sk8arg.github.io/publicidad.github.io/" target="_blank">este enlace</a>.</p>
     </iframe>
-</section>
+  </section>
   <footer>
     La mujer que conquistó el mundo
   </footer>
 
   <script>
+    // Menú hamburguesa
     const boton = document.querySelector('.hamburguesa');
     const menu = document.querySelector('.menu-nav');
-
     boton.addEventListener('click', () => {
       menu.classList.toggle('activo');
+    });
+
+    // Galería desplazable
+    const galeria = document.getElementById('galeria');
+    const modal = document.getElementById('modalImagen');
+    const imagenModal = document.getElementById('imagenModal');
+    const cerrarModalBtn = document.getElementById('cerrarModal');
+    const btnAnterior = document.getElementById('anterior');
+    const btnSiguiente = document.getElementById('siguiente');
+    let imagenes = Array.from(galeria.querySelectorAll('img'));
+    let actual = 0;
+
+    function mostrarModal(idx) {
+      actual = idx;
+      imagenModal.src = imagenes[actual].dataset.grande;
+      imagenModal.alt = imagenes[actual].alt || '';
+      modal.classList.add('active');
+    }
+
+    galeria.addEventListener('click', function(e) {
+      if (e.target.tagName === 'IMG') {
+        let idx = imagenes.indexOf(e.target);
+        if (idx !== -1) {
+          mostrarModal(idx);
+        }
+      }
+    });
+
+    cerrarModalBtn.addEventListener('click', function() {
+      modal.classList.remove('active');
+      imagenModal.src = '';
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        imagenModal.src = '';
+      }
+    });
+
+    btnAnterior.addEventListener('click', function(e) {
+      e.stopPropagation();
+      actual = (actual - 1 + imagenes.length) % imagenes.length;
+      mostrarModal(actual);
+    });
+
+    btnSiguiente.addEventListener('click', function(e) {
+      e.stopPropagation();
+      actual = (actual + 1) % imagenes.length;
+      mostrarModal(actual);
+    });
+
+    window.addEventListener('keydown', function(e) {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') {
+        modal.classList.remove('active');
+        imagenModal.src = '';
+      }
+      if (e.key === 'ArrowLeft') {
+        btnAnterior.click();
+      }
+      if (e.key === 'ArrowRight') {
+        btnSiguiente.click();
+      }
     });
   </script>
 </body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+        <li><a href="Contactanos.html">Contactanos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="seccion-contactos">
+    <div class="texto-banner">
+        <section class="formulario-contacto">
+            <h2>Contacto</h2>
+            <form action="gracias.html" method="get">
+              
+              <label for="nombre">Nombre y Apellido:</label>
+              <input type="text" id="nombre" name="nombre" required>
+          
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="mensaje">Mensage:</label>
+              <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+          
+              <input type="submit" value="Enviar" name="Enviar"> 
+            </form>
+           </section>
+          
+    </div>
+
+    </div>
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>

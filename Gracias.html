@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audrey Hepburn</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+        <img class="Audrey" src="imagecompressor/signa audrey-min.png" alt="Foto de Audrey Hepburn">
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">&#9776;</button>
+
+    <nav class="menu-nav">
+      <ul class="menu">
+        <li><a href="Cinematografia.html">Cinematografía</a></li>
+        <li><a href="Moda.html">Moda</a></li>
+        <li><a href="Caridad.html">Caridad</a></li>
+        <li><a href="Premios.html">Premios</a></li>
+        <li><a href="Biografia.html">Biografía</a></li>
+        <li><a href="Contactanos.html">Contactanos</a></li>
+      </ul>
+    </nav>
+    <meta charset="UTF-8">
+    <title>Gracias por tu mensaje</title>
+    <link rel="stylesheet" href="gracias.css">
+  </header>
+  
+  <div class="seccion-gracias">
+    <div class="texto-banner">
+        <body>
+            <div class="mensaje-gracias">
+              <h1>¡Gracias!</h1>
+              <p>Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto con vos a la brevedad.</p>
+              <a href="index.html">Volver al inicio</a>
+            </div>
+          </body>
+          
+    </div>
+
+    </div>
+
+  <footer>
+    La mujer que conquistó el mundo
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('.menu-nav');
+
+    boton.addEventListener('click', () => {
+      menu.classList.toggle('activo');
+    });
+  </script>
+</body>
+</html>
