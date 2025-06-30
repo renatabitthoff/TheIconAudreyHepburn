@@ -1,0 +1,73 @@
+
+.ad-container {
+    display: flex;
+    max-width: 720px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .ad-image {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  .ad-content {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  
+  .ad-content h2 {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .ad-container a {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #fff;   
+    color: #000;
+    text-decoration: none;
+    font-weight: 550;
+    border-radius: 8px;
+  }
+
+  .ad-button:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  @media (max-width: 600px) {
+    .ad-container {
+      flex-direction: column;
+      max-width: 300px;
+      height: auto;
+      height: 100vh;
+    }
+  
+    .ad-image {
+      width: 90%;
+      height: auto;
+    }
+  
+    .ad-content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .ad-button {
+      font-size: 1rem;
+      padding: 10px 16px;
+      margin-top: 100px;
+    }
+  }

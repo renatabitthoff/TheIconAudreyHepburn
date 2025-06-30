@@ -311,3 +311,87 @@
     box-sizing: border-box;
     text-align: center;
   }
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 40px 0 20px 0;
+    justify-content: center;
+  }
+  .galeria img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .galeria img:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    transform: scale(1.08);
+  }
+  .modal-imagen {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    animation: aparecer 0.2s;
+    flex-direction: column;
+  }
+  .modal-imagen img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 32px black;
+    margin: 0 40px;
+  }
+  .modal-imagen.active {
+    display: flex;
+  }
+  .modal-imagen .cerrar {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    z-index: 1001;
+  }
+  .modal-imagen .navegacion {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  .modal-imagen .navegacion button {
+    background: rgba(0,0,0,0.3);
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 50%;
+    margin: 0 16px;
+    pointer-events: auto;
+    transition: background 0.2s;
+  }
+  .modal-imagen .navegacion button:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  @keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
